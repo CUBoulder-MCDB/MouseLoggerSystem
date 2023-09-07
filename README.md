@@ -18,14 +18,16 @@ Connect all Arduino's to the system and power everything on.
 
 This software assumes the user's account is "pi" (hint). The user does not need admin privs.
 
-Copy the "bin" and "data" directories into the user's home directory.
+Copy the "bin" directory into the user's home directory.
 
 Create an SSH Key and setup keyed authentication on the web server.
 
 Create a crontab using the "bin/crontab.txt" file as your guide.
 
+Modify the "bin/send_IP.php" file as needed to work with your web server.
+
 ## Usage
 
-All data is collected in the "data" directory.
+All data is collected in a "~/data" directory.
 
 View the "bin/README.txt" file for operation specifics.
