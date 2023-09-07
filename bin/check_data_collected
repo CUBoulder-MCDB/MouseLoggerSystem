@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# a script to check if data is being collected
+
+wc -l data/Group0*/G0?_2015????.csv; echo ""; echo $(( ($(date +%s) - $(date --date='2015-10-15 00:00:00 -0600' +%s) ) / 60 ))

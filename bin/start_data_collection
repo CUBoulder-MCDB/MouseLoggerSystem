@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# Make sure the data collection script is running.
+# Set the polling interval here.
+cd /home/pi/bin
+
+INTERVAL=15
+result=`ps uf | grep gather_data.php | grep -v grep | wc -l`
+
+if [ $result -eq 0 ]; then
+  killall gather_data.php
+  echo "Starting gather_data.php $INTERVAL"
+  ./gather_data.php $INTERVAL &
+fi

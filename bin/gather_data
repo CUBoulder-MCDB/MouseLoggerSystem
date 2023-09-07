@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Kill off any hung processes.
+killall -q MM15-8.php  
+
+# Spawn a process for each expected logger
+/home/pi/bin/MM15-8.php 1 1 &
+/home/pi/bin/MM15-8.php 2 2 &
+/home/pi/bin/MM15-8.php 3 3 &
+/home/pi/bin/MM15-8.php 4 4 &
+sleep 1
+/home/pi/bin/MM15-8.php 5 5 &
+/home/pi/bin/MM15-8.php 6 6 &
+/home/pi/bin/MM15-8.php 7 7 &
+# Pick up any extras.
+/home/pi/bin/MM15-8.php 8 16 &
