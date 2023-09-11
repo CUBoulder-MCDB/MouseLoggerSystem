@@ -72,7 +72,7 @@ fwrite($fp,$link);
 fwrite($fp,$tail);
 fclose($fp);
 //
-`scp /tmp/index.html mouselog1@mouselog1.colorado.edu:/var/vhosts/mouselog1/html/.`
+`scp /tmp/index.html username@hostname.somedomain:/var/www/html/.`
 //`rsync -a /tmp/index.html /var/www/`
 
 ?>
